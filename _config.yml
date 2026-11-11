@@ -1,0 +1,28 @@
+# Lab.Direct — GitHub Pages builds this site with Jekyll automatically on every push to main.
+title: Lab.Direct
+url: https://lab.direct
+baseurl: ""
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - PROMPT.md
+  - scripts
+defaults:
+  - scope: { path: "" }
+    values: { root: "" }
+  - scope: { path: "guides" }
+    values: { root: "../", og_type: "article" }
+  - scope: { path: "tests" }
+    values: { root: "../", layout: "test", og_type: "article" }
+adsense_client: ca-pub-6620975821265271
+owner_contact: https://web.works/contact
+tubes:
+  lavender: Lavender-top tube (EDTA)
+  gold: Gold-top tube (serum separator)
+  gray: Gray-top tube (fluoride)
+  blue: Light-blue-top tube (citrate)
+  green: Green-top tube (heparin)
+  urine: Urine cup
+  swab: Swab or urine sample
+  kit: At-home collection kit

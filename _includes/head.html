@@ -1,0 +1,29 @@
+{%- assign ttl = ld_title | default: page.title -%}
+{%- assign dsc = ld_desc | default: page.description -%}
+{%- assign ogt = page.og_type | default: "website" -%}
+{%- assign r = page.root -%}
+{%- assign canon = page.url | replace: "/index.html", "/" -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ ttl | escape }}</title>
+<meta name="description" content="{{ dsc | escape }}">
+<link rel="canonical" href="{{ site.url }}{{ canon }}">
+<meta name="google-adsense-account" content="{{ site.adsense_client }}">
+<meta property="og:site_name" content="Lab.Direct">
+<meta property="og:type" content="{{ ogt }}">
+<meta property="og:title" content="{{ ttl | escape }}">
+<meta property="og:description" content="{{ dsc | escape }}">
+<meta property="og:url" content="{{ site.url }}{{ canon }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14323A">
+{%- if page.noindex %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<link rel="icon" href="{{ r }}favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="{{ r }}site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ r }}assets/css/site.css">
+{%- unless page.noads %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
+{%- endunless %}

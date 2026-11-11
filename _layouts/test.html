@@ -1,0 +1,40 @@
+{%- assign t = site.data.tests | where: "slug", page.test_slug | first -%}
+{%- capture ld_title %}{{ t.name }}: purpose, preparation, results and cost | Lab.Direct{% endcapture -%}
+{%- assign ld_desc = t.why | truncate: 155, "" -%}
+{%- capture price %}${{ t.price[0] }}–${{ t.price[1] }}{% endcapture -%}
+{%- capture tubecap %}<span class="cap cap-{{ t.tube }}" title="{{ site.tubes[t.tube] }}"></span>{% endcapture -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "MedicalTest", "name": {{ t.name | jsonify }}, "alternateName": {{ t.aka | jsonify }}, "description": {{ t.why | jsonify }}, "url": "{{ site.url }}{{ page.url }}"}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{% for f in t.faq %}{"@type": "Question", "name": {{ f[0] | jsonify }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f[1] | jsonify }} } }{% unless forloop.last %}, {% endunless %}{% endfor %}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/"}, {"@type": "ListItem", "position": 2, "name": "Tests", "item": "{{ site.url }}/tests.html"}, {"@type": "ListItem", "position": 3, "name": {{ t.name | jsonify }}, "item": "{{ site.url }}{{ page.url }}"}]}]</script>
+</head>
+<body data-root="{{ page.root }}">
+{% include header.html %}
+<main id="main">
+<div class="page-head"><div class="wrap"><div class="crumbs"><a href="../index.html">Home</a> / <a href="../tests.html">Tests</a> / {{ t.category | escape }}</div>
+<h1 style="max-width:20ch">{{ t.name | escape }}</h1><p class="lede">{{ t.why | escape }}</p>
+<div class="chips" style="margin-top:14px"><span class="pill-note">{{ tubecap }}{{ site.tubes[t.tube] }}</span><span class="pill-note">Fasting: {{ t.fasting }}</span><span class="pill-note">Results: {{ t.turnaround }}</span><span class="pill-note">Typical cash price {{ price }}</span></div>
+<p class="byline"><span>Sample: {{ t.sample | escape }}</span><span>Last reviewed: {{ site.time | date: "%Y-%m-%d" }}</span></p></div></div>
+<section><div class="wrap article-grid"><div class="prose">
+<h2>What it measures</h2><ul>{% for m in t.measures %}<li>{{ m | escape }}</li>{% endfor %}</ul>
+<h2>How to prepare</h2><p>{{ t.prep | escape }}</p>
+<h2>Reading your results</h2><p>{{ t.results | escape }}</p>
+<div class="callout">Your lab report's own reference range takes precedence over typical ranges. Use the <a href="../decoder.html">results decoder</a> to see where your numbers fall, then review them with a clinician.</div>
+<h2>Who should consider it</h2><p>{{ t.who | escape }}</p>
+<h2>Cost and where to get it</h2><p>Typical direct-pay price: <strong>{{ price }}</strong>. {% if t.kit %}An at-home collection kit is available from several providers. {% else %}This test needs a sample collected at a lab or clinic. {% endif %}Compare totals in the <a href="../costs.html?tests={{ t.slug }}">price estimator</a> or <a href="../find-a-lab.html">find a lab near you</a>.</p>
+<h2>Common questions</h2>{% for f in t.faq %}<details><summary>{{ f[0] | escape }}</summary><p>{{ f[1] | escape }}</p></details>{% endfor %}
+<h2>Videos</h2><div class="vgrid" data-videos="{{ t.video }}" data-limit="2"></div>
+<p class="small muted" style="margin-top:28px">Also called: {{ t.aka | join: ", " | escape }}. Educational information compiled from public sources such as MedlinePlus (NIH), CDC and professional guidelines. Prices are estimated typical direct-pay ranges compiled from published prices at online direct-access providers, rounded; your price may differ. Not medical advice.</p></div>
+<aside><div class="panel" style="margin-bottom:16px"><h3>Get this test for less</h3><p class="small">Tell us your ZIP code and we'll send lower-cost options for this test.</p>
+<form data-form="test-quote" data-subject="Quote request: {{ t.name | escape }}" data-success="Thanks. We'll email lower-cost options shortly."><input type="hidden" name="test" value="{{ t.name | escape }}">
+<div class="field"><label for="aq-email">Email</label><input id="aq-email" type="email" name="email" required></div>
+<div class="field"><label for="aq-zip">ZIP or postal code</label><input id="aq-zip" type="text" name="zip" required></div>
+<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+<label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted about this request.</label>
+<button class="btn btn-gold" type="submit" style="width:100%;margin-top:12px">Get price options</button></form></div>
+<div class="panel"><h3>Related tests</h3><ul class="list-plain">{% for rs in t.related %}{% assign rt = site.data.tests | where: "slug", rs | first %}{% if rt %}<li><a href="{{ rt.slug }}.html" style="display:flex;gap:10px;align-items:center"><span class="cap cap-{{ rt.tube }}" title="{{ site.tubes[rt.tube] }}"></span>{{ rt.name | escape }}</a></li>{% endif %}{% endfor %}</ul></div></aside></div></section>
+</main>
+{% include footer.html %}
+</body>
+</html>
