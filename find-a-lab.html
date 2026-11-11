@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ld:head title="Find a lab near you: walk-in blood test locations | Lab.Direct" desc="Find walk-in labs and patient service centers near your ZIP code or city, see what to bring, and list your lab on Lab.Direct." path="find-a-lab.html" -->
+<!-- /ld:head -->
+</head>
+<body data-root="">
+<!-- ld:header --><!-- /ld:header -->
+<main id="main">
+<div class="page-head"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> / Find a lab</div>
+  <h1>Find a lab near you</h1>
+  <p class="lede">Enter a ZIP code or city to see walk-in labs, patient service centers and at-home collection options.</p>
+</div></div>
+<section style="padding-top:28px">
+  <div class="wrap split">
+    <div>
+      <form class="form-card" id="lab-finder">
+        <div class="field"><label for="lf-loc">ZIP code or city</label><input id="lf-loc" type="text" required placeholder="e.g. 10001 or Austin, TX" autocomplete="postal-code"></div>
+        <div class="field"><label for="lf-kind">Looking for</label><select id="lf-kind"><option>walk-in blood test lab</option><option>patient service center</option><option>STD testing clinic</option><option>urgent care lab testing</option><option>mobile phlebotomy</option></select></div>
+        <button class="btn btn-ink" type="submit" style="width:100%">Show labs</button>
+      </form>
+      <div id="lf-results" style="margin-top:18px" aria-live="polite"></div>
+    </div>
+    <div class="prose">
+      <h2>Before you go</h2>
+      <ul class="ticks">
+        <li>Bring a photo ID and your printed or emailed lab order (requisition).</li>
+        <li>Check whether the location takes walk-ins or needs an appointment; mornings are busiest.</li>
+        <li>Follow fasting instructions for tests that need them.</li>
+        <li>Drink water unless told otherwise — it makes the draw easier.</li>
+        <li>Ask how results are delivered and how long they take.</li>
+      </ul>
+      <h3>Lab networks vs. independent labs</h3>
+      <p>Large national networks run thousands of patient service centers across the US, and most direct-access providers route their orders to one of them. Hospital outpatient labs and independent labs may also accept direct-pay orders. Always confirm the lab accepts the order source you're using.</p>
+    </div>
+  </div>
+</section>
+<section class="band-ink" id="list-your-lab">
+  <div class="wrap split">
+    <div>
+      <h2>List your lab on Lab.Direct</h2>
+      <p style="max-width:34em">Patient service centers, independent labs, mobile phlebotomists, clinics and at-home kit brands can get listed in front of people actively searching for testing.</p>
+      <ul class="ticks">
+        <li>Free basic listing during launch</li>
+        <li>Featured placement on matching test pages and city searches</li>
+        <li>Qualified quote requests from people ready to book</li>
+      </ul>
+      <p class="small">Prefer to talk first? <a href="#" data-email="Lab listing inquiry">Email us</a>.</p>
+    </div>
+    <form class="form-card" data-form="lab-listing" data-subject="New lab listing request" data-success="Thanks. We'll review your listing and reply within two business days.">
+      <div class="grid-2">
+        <div class="field"><label for="ll-org">Lab or business name</label><input id="ll-org" name="business" type="text" required></div>
+        <div class="field"><label for="ll-type">Type</label><select id="ll-type" name="type"><option>Patient service center</option><option>Independent lab</option><option>Clinic or urgent care</option><option>Mobile phlebotomy</option><option>At-home test kit brand</option><option>Telehealth</option></select></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label for="ll-name">Contact name</label><input id="ll-name" name="name" type="text" required></div>
+        <div class="field"><label for="ll-email">Work email</label><input id="ll-email" name="email" type="email" required></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label for="ll-city">City and state</label><input id="ll-city" name="location" type="text" required></div>
+        <div class="field"><label for="ll-web">Website</label><input id="ll-web" name="website" type="url" placeholder="https://"></div>
+      </div>
+      <div class="field"><label for="ll-plan">Interested in</label><select id="ll-plan" name="plan"><option>Free basic listing</option><option>Featured listing</option><option>Lead program (pay per qualified request)</option><option>Not sure yet</option></select></div>
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      <label class="check"><input type="checkbox" name="consent" value="yes" required> I'm authorized to represent this business.</label>
+      <button class="btn btn-gold" type="submit" style="width:100%;margin-top:14px">Submit listing</button>
+    </form>
+  </div>
+</section>
+</main>
+<!-- ld:footer --><!-- /ld:footer -->
+</body>
+</html>

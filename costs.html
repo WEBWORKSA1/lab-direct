@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ld:head title="Lab test price estimator: typical cash prices for blood tests | Lab.Direct" desc="Build a lab panel and see a typical direct-pay total before you order. Compare cash prices for CBC, CMP, lipid panel, A1c, thyroid, vitamin D and more." path="costs.html" -->
+<!-- /ld:head -->
+</head>
+<body data-root="">
+<!-- ld:header --><!-- /ld:header -->
+<main id="main">
+<div class="page-head"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> / Price estimator</div>
+  <h1>What should your lab tests cost?</h1>
+  <p class="lede">Tick the tests you want. You'll see a typical cash total, fasting needs and a link you can share. Then ask us for lower-cost options near you.</p>
+</div></div>
+<section style="padding-top:28px" id="cost-builder">
+  <div class="wrap split">
+    <div>
+      <label for="cost-q">Filter tests</label>
+      <input id="cost-q" type="search" placeholder="Type to filter — e.g. thyroid" style="margin-bottom:12px">
+      <div class="rows" id="cost-list" style="max-height:640px;overflow:auto"></div>
+    </div>
+    <div>
+      <div class="panel" style="margin-bottom:18px">
+        <h2 style="font-size:1.5rem">Your panel</h2>
+        <div id="cost-selected" aria-live="polite"></div>
+      </div>
+      <form class="form-card" data-form="price-quote" data-subject="Panel price quote request" data-success="Thanks. We'll email lower-cost options for your panel within one business day.">
+        <h3>Get lower-cost options for this panel</h3>
+        <input type="hidden" name="panel" id="cost-panel-field">
+        <div class="grid-2">
+          <div class="field"><label for="cq-name">Name</label><input id="cq-name" name="name" type="text" required autocomplete="name"></div>
+          <div class="field"><label for="cq-email">Email</label><input id="cq-email" name="email" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="grid-2">
+          <div class="field"><label for="cq-zip">ZIP or postal code</label><input id="cq-zip" name="zip" type="text" required></div>
+          <div class="field"><label for="cq-when">When do you want to test?</label><select id="cq-when" name="timing"><option>This week</option><option>This month</option><option>Just comparing</option></select></div>
+        </div>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted about this request. We never sell your details.</label>
+        <button class="btn btn-gold" type="submit" style="width:100%;margin-top:14px">Send me price options</button>
+      </form>
+    </div>
+  </div>
+  <div class="wrap prose" style="margin-top:44px">
+    <h2>Why cash prices vary so much</h2>
+    <p>The same cholesterol test can cost $10 through one online provider and several times that when billed through a hospital outpatient lab. Direct-access providers negotiate wholesale rates with national lab networks and sell at a fixed cash price, often with a small physician-order fee. Hospitals bill from a chargemaster, and what you pay depends on your insurance, your deductible and whether the lab is in network.</p>
+    <h2>Five ways to pay less</h2>
+    <ol>
+      <li><strong>Ask for the cash price first.</strong> If you're uninsured or choose not to use insurance, US providers must give you a Good Faith Estimate on request.</li>
+      <li><strong>Buy panels, not singles.</strong> A comprehensive metabolic panel includes 14 tests and usually costs less than ordering several of them separately.</li>
+      <li><strong>Use pre-tax money.</strong> HSA and FSA funds can generally be used for lab tests.</li>
+      <li><strong>Skip tests you don't need.</strong> Large "wellness" bundles often include markers with little evidence behind them.</li>
+      <li><strong>Watch extra fees.</strong> Look for physician-order, draw and kit-shipping fees before checking out.</li>
+    </ol>
+    <p>Read the full guide: <a href="guides/how-to-save-money-on-lab-tests.html">How to save money on lab tests</a>.</p>
+    <p class="small muted">Prices are estimated typical direct-pay ranges compiled from published prices at online direct-access providers, rounded; they are not quotes. Lab.Direct does not sell tests.</p>
+  </div>
+</section>
+</main>
+<!-- ld:footer --><!-- /ld:footer -->
+</body>
+</html>

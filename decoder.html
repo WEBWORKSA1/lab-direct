@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ld:head title="Lab results decoder: what your blood test numbers mean | Lab.Direct" desc="Enter values from your lab report — glucose, A1c, cholesterol, CBC, kidney, liver, thyroid, vitamin D and more — and see where each falls against typical adult ranges." path="decoder.html" -->
+<!-- /ld:head -->
+</head>
+<body data-root="">
+<!-- ld:header --><!-- /ld:header -->
+<main id="main">
+<div class="page-head"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> / Results decoder</div>
+  <h1>Results decoder</h1>
+  <p class="lede">Copy the numbers from your lab report. Each value is placed on a range bar with a plain-language note. Everything runs in your browser.</p>
+</div></div>
+<section style="padding-top:28px" id="decoder">
+  <div class="wrap split wide-left">
+    <div>
+      <div class="report">
+        <div class="report-hd"><strong>Your values</strong>
+          <span class="seg" role="group" aria-label="Use ranges for"><button type="button" data-dsex="f" aria-pressed="true">Female</button><button type="button" data-dsex="m" aria-pressed="false">Male</button></span></div>
+        <div id="dec-rows"></div>
+        <div class="rnote no-print">Green is the typical range, amber is borderline, red is outside the typical range. Flags: L low, H high, B borderline.</div>
+      </div>
+      <div class="chips no-print" style="margin:14px 0 26px"><button class="btn btn-ink btn-sm" type="button" id="dec-print">Print or save as PDF</button><button class="btn btn-ghost btn-sm" type="button" id="dec-clear">Clear values</button></div>
+      <h2>Summary</h2>
+      <div id="dec-summary" aria-live="polite"></div>
+      <div class="callout red" style="margin-top:20px"><strong>When to act fast:</strong> lab "critical" values are phoned to your ordering provider. If you have chest pain, trouble breathing, fainting, confusion or severe weakness, call 911 or your local emergency number. Don't wait for an online tool.</div>
+    </div>
+    <aside class="no-print">
+      <div class="panel" style="margin-bottom:16px">
+        <h3>Choose the results you have</h3>
+        <div id="dec-picker"></div>
+      </div>
+      <form class="panel" id="dec-email" data-form="decoder-summary" data-manual data-subject="Decoder summary request" data-success="Sent. We'll email your summary with next-step resources.">
+        <h3>Email me this summary</h3>
+        <p class="small">Get your summary plus the matching test guides and lower-cost retest options.</p>
+        <div class="field"><label for="de-email">Email</label><input id="de-email" type="email" name="email" required></div>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to receive this email and occasional Lab Notes. Unsubscribe anytime.</label>
+        <button class="btn btn-gold" type="submit" style="width:100%;margin-top:12px">Email my summary</button>
+      </form>
+    </aside>
+  </div>
+  <div class="wrap prose" style="margin-top:40px">
+    <h2>How the decoder works</h2>
+    <p>Each marker uses widely published typical adult reference intervals and clinical cut-offs: the American Diabetes Association for glucose and A1c, the National Cholesterol Education Program and ACC/AHA guidance for lipids, the National Kidney Foundation for eGFR, the NIH Office of Dietary Supplements for vitamin D, and MedlinePlus (National Library of Medicine) for blood counts, chemistry and hormones. Where men and women differ, switch the range selector.</p>
+    <h3>Why your report may disagree</h3>
+    <p>Labs set their own reference ranges based on their instruments and populations, so the range printed next to your result always wins. Ranges also differ for children, during pregnancy and for older adults. A value slightly outside a range is common in healthy people — about 5% of healthy results fall outside a typical reference interval by design.</p>
+    <h3>Units</h3>
+    <p>US labs mostly report in conventional units (mg/dL). Many other countries use SI units (mmol/L). Make sure your units match the ones shown before entering a value. For vitamin D, divide nmol/L by 2.5 to get ng/mL.</p>
+    <p class="small muted">The decoder is educational and does not diagnose. Review results with a licensed clinician.</p>
+  </div>
+</section>
+</main>
+<!-- ld:footer --><!-- /ld:footer -->
+</body>
+</html>

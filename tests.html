@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ld:head title="Lab test library: 36 blood and lab tests explained | Lab.Direct" desc="Search 36 common lab tests by name, goal or category. See what each measures, how to prepare, fasting rules, at-home options and typical cash prices." path="tests.html" -->
+<!-- /ld:head -->
+</head>
+<body data-root="">
+<!-- ld:header --><!-- /ld:header -->
+<main id="main">
+<div class="page-head"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> / Tests</div>
+  <h1>Lab test library</h1>
+  <p class="lede">Every test lists what it measures, why it's ordered, how to prepare, the tube it's drawn in and a typical direct-pay price range. Filter by body system, fasting or at-home availability.</p>
+</div></div>
+<section style="padding-top:28px">
+  <div class="wrap">
+    <div class="panel" style="margin-bottom:18px">
+      <div class="grid-3" style="align-items:end">
+        <div><label for="lib-q">Search tests</label><input id="lib-q" type="search" placeholder="Name, marker or goal — e.g. iron, LDL, fatigue"></div>
+        <div><label for="lib-sort">Sort by</label><select id="lib-sort"><option value="popular">Most searched</option><option value="price">Lowest price</option><option value="az">A to Z</option></select></div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;padding-bottom:10px">
+          <label class="check"><input type="checkbox" id="lib-fasting"> No fasting needed</label>
+          <label class="check"><input type="checkbox" id="lib-kit"> At-home kit available</label>
+        </div>
+      </div>
+      <div class="chips" id="lib-cats" style="margin-top:16px" aria-label="Categories"></div>
+    </div>
+    <p class="small muted" id="lib-count" aria-live="polite"></p>
+    <div class="rows" id="test-library"><div id="lib-rows"><div class="empty">Loading tests…</div></div></div>
+    <ul class="tube-legend" aria-label="Tube cap legend">
+      <li><span class="cap cap-lavender"></span>Lavender (EDTA)</li><li><span class="cap cap-gold"></span>Gold (serum separator)</li><li><span class="cap cap-gray"></span>Gray (fluoride)</li><li><span class="cap cap-blue"></span>Light blue (citrate)</li><li><span class="cap cap-urine"></span>Urine</li><li><span class="cap cap-swab"></span>Swab</li><li><span class="cap cap-kit"></span>Home kit</li>
+    </ul>
+    <div class="prose" style="margin-top:20px">
+      <h2>How to use this library</h2>
+      <p>Start with your goal, not a test name. If you feel tired, the usual starting point is a complete blood count, ferritin, thyroid-stimulating hormone, vitamin D and B12. For heart risk, start with a lipid panel and consider ApoB and lipoprotein(a). For blood sugar, an A1c plus a fasting glucose covers most screening. Our <a href="get-tested.html">testing-plan builder</a> does this matching for you.</p>
+      <h3>About the prices</h3>
+      <p>Prices are estimated typical direct-pay ranges compiled from published prices at online direct-access providers, rounded to whole dollars. They exclude insurance and may exclude a physician-order or draw fee of about $5–$15. Use the <a href="costs.html">price estimator</a> to total a panel.</p>
+      <h3>About the cap colors</h3>
+      <p>Labs collect blood into tubes with different additives, color-coded by cap. The cap shown beside each test is the tube most often used for it. Your lab may use a different tube for the same test; that's normal and doesn't change the result.</p>
+    </div>
+  </div>
+</section>
+</main>
+<!-- ld:footer --><!-- /ld:footer -->
+</body>
+</html>
