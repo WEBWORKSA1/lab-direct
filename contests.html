@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ld:head title="Contests and prizes: Lab IQ quiz, explainer videos and referrals | Lab.Direct" desc="Play the Lab IQ quiz for a monthly prize draw, enter the explainer-video contest or share Lab.Direct to win. No purchase necessary." path="contests.html" -->
+<!-- /ld:head -->
+</head>
+<body data-root="">
+<!-- ld:header --><!-- /ld:header -->
+<main id="main">
+<div class="page-head"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> / Contests</div>
+  <h1>Contests and prizes</h1>
+  <p class="lede">Learn something, make something or share something. Three ways to win, all free to enter.</p>
+</div></div>
+<section style="padding-top:28px" id="quiz">
+  <div class="wrap split wide-left">
+    <div class="form-card" id="lab-quiz">
+      <h2 style="font-size:1.6rem">Lab IQ Challenge</h2>
+      <p class="small muted">Ten questions on blood tests and preparation. Monthly prize: a $50 digital gift card drawn from all entries.</p>
+      <div id="quiz-area" aria-live="polite"></div>
+    </div>
+    <form class="panel" data-form="contest-labiq" data-subject="Contest entry: Lab IQ monthly draw" data-success="You're entered in this month's draw. Good luck.">
+      <h3>Enter this month's draw</h3>
+      <input type="hidden" name="score" id="quiz-score" value="not completed">
+      <div class="field"><label for="qe-name">Name</label><input id="qe-name" name="name" type="text" required></div>
+      <div class="field"><label for="qe-email">Email</label><input id="qe-email" name="email" type="email" required></div>
+      <div class="field"><label for="qe-country">Country</label><select id="qe-country" name="country"><option>United States</option><option>Canada</option></select></div>
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      <label class="check"><input type="checkbox" name="eligible" value="yes" required> I'm 18 or older (or the age of majority where I live) and accept the official rules below.</label>
+      <button class="btn btn-gold" type="submit" style="width:100%;margin-top:12px">Enter the draw</button>
+      <p class="small muted" style="margin:10px 0 0">No purchase or quiz score needed to enter.</p>
+    </form>
+  </div>
+</section>
+<section class="band-panel" id="video">
+  <div class="wrap split">
+    <div>
+      <h2>Explain-a-Test video contest</h2>
+      <p>Make a clear, accurate explainer of up to 3 minutes about any test in our <a href="tests.html">library</a>. Upload it to YouTube and send us the link.</p>
+      <ul class="ticks">
+        <li>Winner: $250 and a featured spot in the Lab.Direct video library</li>
+        <li>Two runners-up: featured placement on the matching test page</li>
+        <li>Judged on accuracy (50%), clarity (30%) and production (20%)</li>
+        <li>Entries close on the last day of each quarter</li>
+      </ul>
+    </div>
+    <form class="form-card" data-form="contest-video" data-subject="Contest entry: explainer video" data-success="Entry received. We'll confirm eligibility by email.">
+      <div class="grid-2">
+        <div class="field"><label for="ve-name">Name</label><input id="ve-name" name="name" type="text" required></div>
+        <div class="field"><label for="ve-email">Email</label><input id="ve-email" name="email" type="email" required></div>
+      </div>
+      <div class="field"><label for="ve-url">YouTube link</label><input id="ve-url" name="video_url" type="url" required placeholder="https://www.youtube.com/watch?v=…"></div>
+      <div class="grid-2">
+        <div class="field"><label for="ve-test">Test covered</label><input id="ve-test" name="test" type="text" required placeholder="e.g. Lipid panel"></div>
+        <div class="field"><label for="ve-cred">Credentials (optional)</label><input id="ve-cred" name="credentials" type="text" placeholder="e.g. MLS(ASCP), RN"></div>
+      </div>
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      <label class="check"><input type="checkbox" name="rights" value="yes" required> I created this video, own the rights to its content and allow Lab.Direct to embed it.</label>
+      <button class="btn btn-gold" type="submit" style="width:100%;margin-top:12px">Submit my video</button>
+    </form>
+  </div>
+</section>
+<section id="referral">
+  <div class="wrap split">
+    <div>
+      <h2>Share and win</h2>
+      <p>Create your personal link and share Lab.Direct. Each quarter, the person whose link brings the most new testing-plan requests wins a $100 digital gift card.</p>
+      <form id="ref-gen" class="hero-search" style="margin:16px 0">
+        <label class="visually-hidden" for="ref-name">Your name or handle</label>
+        <input id="ref-name" type="text" placeholder="Your name or handle" required>
+        <button class="btn btn-ink" type="submit">Create my link</button>
+      </form>
+      <p id="ref-out" aria-live="polite"></p>
+      <p class="small muted">Referral credit counts when a visitor arriving through your link submits a testing-plan request. Register your link below so we can contact you if you win.</p>
+      <form data-form="contest-referral" data-subject="Contest entry: referral" data-success="Registered. We'll email you if you win.">
+        <div class="grid-2"><div class="field"><label for="re-handle">Handle used in your link</label><input id="re-handle" name="handle" type="text" required></div><div class="field"><label for="re-email">Email</label><input id="re-email" name="email" type="email" required></div></div>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        <label class="check"><input type="checkbox" name="eligible" value="yes" required> I'm 18+ and accept the official rules.</label>
+        <button class="btn btn-ghost" type="submit" style="margin-top:10px">Register my link</button>
+      </form>
+    </div>
+    <div class="prose" id="rules">
+      <h2>Official rules (summary)</h2>
+      <p><strong>No purchase necessary.</strong> A purchase does not improve your chances of winning. Sponsor: Lab.Direct.</p>
+      <p><strong>Eligibility:</strong> open to legal residents of the 50 United States, the District of Columbia and Canada who are 18 or older (or the age of majority in their province or state). Void where prohibited. Employees and contractors of Lab.Direct and their households are not eligible.</p>
+      <p><strong>Entry periods:</strong> Lab IQ draws run each calendar month; the video contest runs each calendar quarter; the referral challenge runs each calendar quarter. Limit one Lab IQ entry per person per month.</p>
+      <p><strong>Winner selection:</strong> Lab IQ winners are drawn at random from all eligible entries within 7 days after the month ends; odds depend on the number of eligible entries. Video and referral winners are chosen on the criteria above. Canadian winners must correctly answer a time-limited mathematical skill-testing question.</p>
+      <p><strong>Notification:</strong> winners are notified by email and must respond within 14 days or an alternate winner may be selected. Prizes are not transferable and have no cash alternative except at the sponsor's discretion. Winners are responsible for any taxes.</p>
+      <p><strong>Privacy:</strong> entry details are used only to run the contest and contact winners, as described in our <a href="privacy.html">privacy policy</a>.</p>
+      <p class="small muted">Want to fund a prize? <a href="advertise.html">Become a contest sponsor</a>.</p>
+    </div>
+  </div>
+</section>
+</main>
+<!-- ld:footer --><!-- /ld:footer -->
+</body>
+</html>
