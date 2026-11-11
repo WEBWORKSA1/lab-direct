@@ -1,11 +1,14 @@
+---
+title: "Health and lab testing news, updated daily | Lab.Direct"
+description: "Latest health research and regulatory news from the National Institutes of Health and the US Food and Drug Administration, updated automatically every day."
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- ld:head title="Health and lab testing news, updated daily | Lab.Direct" desc="Latest health research and regulatory news from the National Institutes of Health and the US Food and Drug Administration, updated automatically every day." path="news.html" -->
-<!-- /ld:head -->
+{% include head.html %}
 </head>
-<body data-root="">
-<!-- ld:header --><!-- /ld:header -->
+<body data-root="{{ page.root }}">
+{% include header.html %}
 <main id="main">
 <div class="page-head"><div class="wrap">
   <div class="crumbs"><a href="index.html">Home</a> / News</div>
@@ -28,6 +31,6 @@
   </div>
 </section>
 </main>
-<!-- ld:footer --><!-- /ld:footer -->
+{% include footer.html %}
 </body>
 </html>
