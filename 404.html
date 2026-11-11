@@ -1,9 +1,15 @@
+---
+title: "Page not found | Lab.Direct"
+description: "This page could not be found."
+noads: true
+noindex: true
+sitemap: false
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <script>/* Resolve relative links from the site root on any path (custom domain or github.io project path). */document.write('<base href="' + (location.hostname.slice(-10) === "github.io" ? "/" + location.pathname.split("/")[1] + "/" : "/") + '">');</script>
-<!-- ld:head title="Page not found | Lab.Direct" desc="This page could not be found." path="404.html" noads noindex -->
-<!-- /ld:head -->
+{% include head.html %}
 <script>
 /* If a static test page hasn't been generated yet, open the dynamic version instead. */
 (function () {
@@ -12,8 +18,8 @@
 })();
 </script>
 </head>
-<body data-root="">
-<!-- ld:header --><!-- /ld:header -->
+<body data-root="{{ page.root }}">
+{% include header.html %}
 <main id="main">
 <section><div class="wrap" style="max-width:720px">
   <h1>We couldn't find that page</h1>
@@ -22,6 +28,6 @@
   <ul class="list-plain"><li><a href="index.html">Home</a></li><li><a href="tests.html">Test library</a></li><li><a href="decoder.html">Results decoder</a></li><li><a href="guides.html">Guides</a></li></ul>
 </div></section>
 </main>
-<!-- ld:footer --><!-- /ld:footer -->
+{% include footer.html %}
 </body>
 </html>
