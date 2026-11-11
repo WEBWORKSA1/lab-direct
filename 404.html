@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>/* Resolve relative links from the site root on any path (custom domain or github.io project path). */document.write('<base href="' + (location.hostname.slice(-10) === "github.io" ? "/" + location.pathname.split("/")[1] + "/" : "/") + '">');</script>
+<!-- ld:head title="Page not found | Lab.Direct" desc="This page could not be found." path="404.html" noads noindex -->
+<!-- /ld:head -->
+<script>
+/* If a static test page hasn't been generated yet, open the dynamic version instead. */
+(function () {
+  var m = location.pathname.match(/^(.*\/)tests\/([a-z0-9-]+)\.html$/);
+  if (m) location.replace(m[1] + "test.html?t=" + m[2]);
+})();
+</script>
+</head>
+<body data-root="">
+<!-- ld:header --><!-- /ld:header -->
+<main id="main">
+<section><div class="wrap" style="max-width:720px">
+  <h1>We couldn't find that page</h1>
+  <p class="lede">The link may be old or mistyped. Search for a test, or start from one of these:</p>
+  <form class="hero-search" data-search role="search"><label class="visually-hidden" for="nf-q">Search</label><input id="nf-q" type="search" placeholder="Search tests and guides"><button class="btn btn-ink" type="submit">Search</button></form>
+  <ul class="list-plain"><li><a href="index.html">Home</a></li><li><a href="tests.html">Test library</a></li><li><a href="decoder.html">Results decoder</a></li><li><a href="guides.html">Guides</a></li></ul>
+</div></section>
+</main>
+<!-- ld:footer --><!-- /ld:footer -->
+</body>
+</html>
