@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ld:head title="Get a personalized lab testing plan in 60 seconds | Lab.Direct" desc="Answer four quick questions about your goal and get a starter list of lab tests, an estimated cash total and lower-cost options near you." path="get-tested.html" -->
+<!-- /ld:head -->
+</head>
+<body data-root="">
+<!-- ld:header --><!-- /ld:header -->
+<main id="main">
+<div class="page-head"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> / Testing plan</div>
+  <h1 style="max-width:16ch">Get your testing plan in 60 seconds</h1>
+  <p class="lede">Four quick questions. You'll get a starter list of tests matched to your goal, an estimated cash total, and lower-cost options near you by email.</p>
+</div></div>
+<section style="padding-top:30px">
+  <div class="wrap split wide-left">
+    <div>
+      <div id="funnel" class="form-card">
+        <ol class="steps" aria-label="Progress"><li class="now"></li><li></li><li></li><li></li></ol>
+        <form data-form="testing-plan-lead" data-manual data-subject="New lead: testing plan" data-success="Your plan is ready below. We've also sent it to your inbox.">
+          <div class="step active">
+            <h2 style="font-size:1.5rem">What do you want to check?</h2>
+            <p class="small muted">Pick all that apply.</p>
+            <div class="options">
+              <label class="opt"><input type="checkbox" name="goal" value="checkup"><span>Routine checkup</span></label>
+              <label class="opt"><input type="checkbox" name="goal" value="energy"><span>Low energy or fatigue</span></label>
+              <label class="opt"><input type="checkbox" name="goal" value="heart"><span>Heart and cholesterol</span></label>
+              <label class="opt"><input type="checkbox" name="goal" value="sugar"><span>Blood sugar</span></label>
+              <label class="opt"><input type="checkbox" name="goal" value="thyroid"><span>Thyroid</span></label>
+              <label class="opt"><input type="checkbox" name="goal" value="hormones"><span>Hormones</span></label>
+              <label class="opt"><input type="checkbox" name="goal" value="sexual"><span>Sexual health</span></label>
+              <label class="opt"><input type="checkbox" name="goal" value="fitness"><span>Fitness and performance</span></label>
+              <label class="opt"><input type="checkbox" name="goal" value="organs"><span>Kidney and liver</span></label>
+              <label class="opt"><input type="checkbox" name="goal" value="gut"><span>Gut and celiac</span></label>
+            </div>
+            <div class="step-nav"><span></span><button class="btn btn-ink" type="button" data-next>Continue</button></div>
+          </div>
+          <div class="step">
+            <h2 style="font-size:1.5rem">A little about you</h2>
+            <p class="small muted">Used only to match tests and reference ranges.</p>
+            <div class="field"><label for="fz-age">Age</label><select id="fz-age" name="age" required><option value="">Select</option><option>18-24</option><option>25-34</option><option>35-44</option><option>45-54</option><option>55-64</option><option>65+</option></select></div>
+            <fieldset style="border:0;padding:0;margin:0"><legend style="font-weight:600;font-size:.92rem;margin-bottom:6px">Sex assigned at birth (for reference ranges)</legend>
+              <div class="options"><label class="opt"><input type="radio" name="sex" value="female" required><span>Female</span></label><label class="opt"><input type="radio" name="sex" value="male"><span>Male</span></label><label class="opt"><input type="radio" name="sex" value="prefer-not"><span>Prefer not to say</span></label></div></fieldset>
+            <div class="step-nav"><button class="btn btn-ghost" type="button" data-prev>Back</button><button class="btn btn-ink" type="button" data-next>Continue</button></div>
+          </div>
+          <div class="step">
+            <h2 style="font-size:1.5rem">How do you want to test?</h2>
+            <div class="field"><label for="fz-pref">Sample collection</label><select id="fz-pref" name="collection"><option value="either">Either is fine</option><option value="lab">Lab blood draw</option><option value="kit">At-home kit if possible</option></select></div>
+            <div class="grid-2">
+              <div class="field"><label for="fz-budget">Budget</label><select id="fz-budget" name="budget"><option>Under $100</option><option>$100–$250</option><option>$250–$500</option><option>$500+</option><option>Not sure</option></select></div>
+              <div class="field"><label for="fz-when">When</label><select id="fz-when" name="timing"><option>This week</option><option>This month</option><option>Just researching</option></select></div>
+            </div>
+            <div class="field"><label class="check"><input type="checkbox" name="has_insurance" value="yes"> I have health insurance but want cash-price options</label></div>
+            <div class="step-nav"><button class="btn btn-ghost" type="button" data-prev>Back</button><button class="btn btn-ink" type="button" data-next>See my match</button></div>
+          </div>
+          <div class="step" data-teaser>
+            <h2 style="font-size:1.5rem">Where should we send your plan?</h2>
+            <div class="teaser" id="fz-teaser" aria-live="polite"></div>
+            <div class="grid-2">
+              <div class="field"><label for="fz-name">First name</label><input id="fz-name" name="name" type="text" required autocomplete="given-name"></div>
+              <div class="field"><label for="fz-email">Email</label><input id="fz-email" name="email" type="email" required autocomplete="email"></div>
+            </div>
+            <div class="grid-2">
+              <div class="field"><label for="fz-zip">ZIP or postal code</label><input id="fz-zip" name="zip" type="text" required autocomplete="postal-code"></div>
+              <div class="field"><label for="fz-phone">Phone (optional)</label><input id="fz-phone" name="phone" type="tel" autocomplete="tel"></div>
+            </div>
+            <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+            <label class="check"><input type="checkbox" name="consent" value="yes" required> Send me my plan and lower-cost options. Lab.Direct and vetted lab partners may contact me about this request. I can opt out anytime. I've read the <a href="privacy.html">privacy policy</a>.</label>
+            <div class="step-nav"><button class="btn btn-ghost" type="button" data-prev>Back</button><button class="btn btn-gold" type="submit">Show my full plan</button></div>
+          </div>
+        </form>
+      </div>
+      <div id="fz-result" aria-live="polite"></div>
+    </div>
+    <aside>
+      <div class="panel" style="margin-bottom:16px">
+        <h3>What you get</h3>
+        <ul class="ticks">
+          <li>A starter list of tests matched to your goal</li>
+          <li>An estimated typical cash total</li>
+          <li>Prep notes: fasting, timing, supplements to pause</li>
+          <li>Lower-cost lab and kit options near you</li>
+        </ul>
+      </div>
+      <div class="panel" style="margin-bottom:16px">
+        <h3>How it works</h3>
+        <ol style="padding-left:1.2em;margin:0">
+          <li>Answer four questions.</li>
+          <li>See your matched tests instantly.</li>
+          <li>Compare options and book where you like.</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h3>Your privacy</h3>
+        <p class="small">We never sell your details. We share your request only with partners you'd need to fulfil it, and only after you ask. Plans are educational; a clinician can tailor testing to your history and medicines.</p>
+        <p class="small" style="margin:0">Are you a lab or provider? <a href="advertise.html#partner">Receive qualified requests</a>.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+<!-- ld:footer --><!-- /ld:footer -->
+</body>
+</html>
